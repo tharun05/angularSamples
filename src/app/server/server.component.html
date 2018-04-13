@@ -1,0 +1,26 @@
+<!-- <p>the server status is {{serverId}} and the server status {{serverStatus}}</p>
+
+<button [disabled]="!enableButton" (click)="setStatus($event)">Submit</button>
+
+
+<input type="text" (input)="inputEvent($event)">
+{{serverStatus}}
+
+<button (click)="creationDay(serverCreationDay)">server creation day</button>
+<input type="text" [(ngModel)]="serverCreationDay" >
+{{serverCreationDay}} -->
+<!--Card-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of cards">
+      <div class="card" (click)="getCardDetail(item)">
+        <img class="img-fluid" [src]="item.img" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">{{item.name}}</h4>
+          <p class="card-text">{{item.description}}</p>
+          <a href="#" class="btn btn-primary" >Button</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
